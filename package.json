@@ -1,0 +1,28 @@
+{
+  "name": "notion-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for Notion",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "notion-mcp-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node build/index.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "tsc": "^2.0.4",
+    "typescript": "^5.3.3"
+  }
+}
